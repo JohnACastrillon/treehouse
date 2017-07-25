@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title></title>
+  <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+  <link href='styles/main.css' rel='stylesheet' type="text/css">
+</head>
+<body ng-app="todoListApp">
+  <div ng-controller="mainCtrl" class="list">
+    <h1 ng-click="helloWorld()">My TODOS</h1>
+    <input type="checkbox">
+    <label class="editing-table" ng-click="helloWorld()">A Sample TODO</label>
+    <input class='editing-label' type="text">
+    <div ng-controller="coolCtrl" class="actions">
+      <a href="" ng-click="whoAmI()">edit</a>
+      <a href="" ng-click="helloWorld()">save</a>
+      <a class="delete" href="">delete</a>
+    </div>
+  </div>
+  <div ng-controller='imASibling'>
+    {{fooBar}}
+  </div>
+  <script src="vendor/angular.js" type="text/javascript"></script>
+  <script src="scripts/app.js" type="text/javascript"></script>
+</body>
+</html>
