@@ -3,12 +3,9 @@ angular.module("todoListApp", [])
 .controller('mainCtrl', function($scope, dataService) {
   $scope.helloConsole = dataService.helloConsole;
 
-  $scope.helloWorld = function() {
-    console.log("Hello there! This the helloWorld controller function, in the mainCtrl!");
-  };
-
-  $scope.learningNgChange = function() {
-    console.log("An input changed");
+  $scope.addTodo = function() {
+    let todo = {name: "This is a new todo."};
+    $scope.todos.push(todo);
   };
 
   $scope.deleteTodo = function(todo, $index) {
@@ -16,7 +13,7 @@ angular.module("todoListApp", [])
     $scope.todos.splice($index, 1);
   };
 
-  $scope.saveTodo = function(todo) { 
+  $scope.saveTodo = function(todo) {
     dataService.saveTodo(todo);
   }
 
